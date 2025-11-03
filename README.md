@@ -1,5 +1,216 @@
-# Eiar
-to manage ledger of memeber
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eiar saving and credit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
+  <style>
+    body {
+      background: linear-gradient(135deg, #e8f5e9, #c8e6c9, #a5d6a7);
+      font-family: 'Poppins', sans-serif;
+      color: #1b5e20;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
 
-click to visite website:https://github.com/eiarsavingandcredit/Eia/
+    header img {
+      width: 90px;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+    }
+
+    header h1 {
+      color: blue;
+    }
+
+    .pink-text {
+      color: #ec4899;
+      font-weight: 700;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(46, 125, 50, 0.4);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.4s ease;
+      box-shadow: 0 6px 15px rgba(46, 125, 50, 0.15);
+    }
+
+    .card:hover {
+      transform: translateY(-6px) scale(1.02);
+      border-color: #1b5e20;
+      box-shadow: 0 12px 30px rgba(27, 94, 32, 0.25);
+    }
+
+    .card h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .card:hover h2 {
+      color: #2e7d32;
+    }
+
+    footer {
+      background: rgba(27, 94, 32, 0.1);
+      backdrop-filter: blur(8px);
+      border-top: 2px solid rgba(27, 94, 32, 0.2);
+      border-radius: 20px 20px 0 0;
+      padding: 1.5rem;
+      width: 100%;
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-links a {
+      color: #1b5e20;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: #2e7d32;
+    }
+
+    .footer-highlight {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #1b5e20;
+    }
+
+    .hidden-section {
+      display: none;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.4s ease;
+    }
+
+    .visible-section {
+      display: grid;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .tab-button {
+      background: rgba(255, 255, 255, 0.9);
+      color: #1b5e20;
+      font-weight: 600;
+      border: 2px solid #2e7d32;
+      border-radius: 0.75rem;
+      padding: 0.75rem 2rem;
+      margin: 0.5rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(46, 125, 50, 0.15);
+    }
+
+    .tab-button:hover {
+      background: #2e7d32;
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    .tab-button.active {
+      background: #1b5e20;
+      color: white;
+      box-shadow: 0 6px 15px rgba(27, 94, 32, 0.3);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="text-center mb-8">
+    <img src="39a8f496-4053-44b4-91ac-8f63ff76dd05.png">
+    <h1 class="text-4xl md:text-1xl font-extrabold mb-1">
+      ETHIOPIAN INSTITUTE OF AGRICULTURAL RESEARCH SAVING AND CREDIT COOPERATIVE SOCIETY LTD
+    </h1>
+    <p class="text-4xl md:text-1xl font-extrabold mb-1">
+      <span class="pink-text">Smart Ledger Access System</span>.
+    </p>
+  </header>
+
+  <!-- BUTTONS -->
+  <div class="flex flex-wrap justify-center mb-8">
+    <button id="memberBtn" class="tab-button active">Member Ledger</button>
+    <button id="otherBtn" class="tab-button">Other</button>
+  </div>
+
+  <!-- MEMBER LEDGER SECTION -->
+  <main id="memberSection" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl visible-section">
+    <a href="https://docs.google.com/spreadsheets/d/14xWUgL1Ks6sTnHuvwBIshYUVsf-Wp7Z-/edit?gid=1444556498#gid=1444556498" target="_blank" class="card">
+      <h2>2018 Ledger Update</h2>
+    </a> 
+    <a href="https://docs.google.com/spreadsheets/d/14xWUgL1Ks6sTnHuvwBIshYUVsf-Wp7Z-/edit?gid=1444556498#gid=1444556498" target="_blank" class="card">
+      <h2>2017 Ledger Update</h2>
+    </a>
+    <a href="https://docs.google.com/spreadsheets/d/1jJ84huWdmR9omEIoGQWNEOCZbjGpNTKm/edit?gid=949837737#gid=949837737" target="_blank" class="card">
+      <h2>2016 Ledger Update</h2>
+    </a>
+    <a href="https://docs.google.com/spreadsheets/d/13GAaq4CkUPvndy2V9bRTTZzC_ouTfo1u/edit?gid=2057924148#gid=2057924148" target="_blank" class="card">
+      <h2>2015 Ledger Update</h2>
+    </a>
+    <a href="https://docs.google.com/spreadsheets/d/13hYX-9Vg7NLZuKIwOpcBNFaMh5zEdX5Y/edit?gid=1673005844#gid=1673005844" target="_blank" class="card">
+      <h2>2014 Ledger Update</h2>
+    </a>
+    <a href="https://docs.google.com/spreadsheets/d/1yhhaENgJNgAmZB_L3ly8KxgUDoAUeL61/edit?gid=760359577#gid=760359577" target="_blank" class="card">
+      <h2>2013 Ledger Update</h2>
+    </a>
+    <a href="https://docs.google.com/spreadsheets/d/1_Rz0oEuAOjBeaKV0cZVJDo09BQxQd8Re/edit?gid=637175905#gid=637175905" target="_blank" class="card">
+      <h2>2012 Ledger Update</h2>
+    </a>
+    <a href="https://docs.google.com/spreadsheets/d/14xWUgL1Ks6sTnHuvwBIshYUVsf-Wp7Z-/edit?gid=1444556498#gid=1444556498" target="_blank" class="card">
+      <h2>2011 Ledger Update</h2>
+    </a>
+  </main>
+
+  <!-- OTHER SECTION -->
+  <main id="otherSection" class="hidden-section grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
+    <a href="https://docs.google.com/spreadsheets/d/1T-4yOOcopc0FNKgNJxQNXR88kHOApmfs/edit?gid=1828932859#gid=1828932859" target="_blank" class="card">
+      <h2>Journal Voucher Update</h2>
+    </a>
+    <a href="https://docs.google.com/spreadsheets/d/1xzQs1pCZvvlf7z-NwHVxnv9QJUYuc08U/edit?gid=1856172193#gid=1856172193" target="_blank" class="card">
+      <h2>EIAR File Transfer AMSALU Update</h2>
+    </a>
+    <a href="https://docs.google.com/document/d/19JSZDWzoO7pJT2qmFczZ6kYbu7Gepm0n/edit" target="_blank" class="card">
+      <h2>Transfer Letter REF.NO.EASCS</h2>
+    </a>
+    <a href="https://docs.google.com/spreadsheets/d/1fpFmLtzRBolCXsdXHEP87wAJtihkCJce/edit?gid=1056070589#gid=1056070589" target="_blank" class="card">
+      <h2>EIAR File All SHARE SENE 2016 Update</h2>
+    </a>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links mb-2">
+      <a href="#">Home</a>
+      <a href="#">Support</a>
+      <a href="#">Contact</a>
+    </div>
+    <p>Designed by <span class="footer-highlight">Amsalu Dereje</span></p>
+    <p>📞 <span class="footer-highlight">+251 922200409</span></p>
+    <p class="mt-2 italic text-sm opacity-90">“Customer Service and Information Expert”</p>
+  </footer>
+
+  
+</body>
+</html>
+
